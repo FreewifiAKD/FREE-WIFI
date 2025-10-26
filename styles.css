@@ -1,0 +1,218 @@
+/* === Free Wi-Fi Project — Final CSS === */
+
+/* Theme colors */
+:root {
+  --accent: #00e6ff;
+  --muted: #a0a0a0;
+  --bg-dark: #010b17;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Body Base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Header */
+.mini-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.mini-header h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.5rem;
+  letter-spacing: 0.6px;
+}
+
+.back {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+/* === Home Page === */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #011c2f, #000);
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(0, 230, 255, 0.7);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Glowing button */
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  padding: 16px 35px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 230, 255, 0.4);
+}
+
+.main-button:hover {
+  background: #00b7cc;
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 230, 255, 0.7);
+}
+
+/* Add optional icon inside button */
+.main-button i {
+  font-style: normal; /* placeholder for icon, can use emoji or FontAwesome */
+}
+
+/* === Wi-Fi List Page === */
+.list-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card h4 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.card p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* === Map Section === */
+.map-mini {
+  height: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #032036;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* === Wi-Fi Detail Page === */
+.detail-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.detail-container h2 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.detail-container p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.detail-map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  background: #02182c;
+  margin-top: 20px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 40px 0;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 60px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .mini-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .list-container {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+  }
+
+  .map-mini {
+    height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotspot — Detail</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <main class="detail-main">
+    <a href="list.html" class="back" style="margin:20px;display:inline-block">← Back</a>
+    <section class="detail-card glass" id="detail">
+      <h2 id="name">Loading…</h2>
+      <p id="desc"></p>
+      <p><strong>SSID:</strong> <span id="ssid"></span></p>
+      <p><strong>Password:</strong> <span id="password">••••••</span> <button id="reveal">Reveal</button></p>
+
+      <div id="map-detail" style="height:360px;margin-top:12px;border-radius:12px;overflow:hidden"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
