@@ -1,8 +1,19 @@
 // app.js (module)
 const demoHotspots = [
-  { id:'h1', name:'MALABAR TEA', ssid:'Big fat momo', password:'bfm@3777', lat:11.603119621566789, lng:75.59050468405299, desc:'Open 7am–10pm' },
-  { id:'h2', name:'MALABAR TEA', ssid:'GNXS-2.4G-7FFB52', password:'1234567890', lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
-  { id:'h3', name:'MALABAR TEA', ssid:'GNXS-2.4G-1852D0', password:'arunp123', lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' }
+  { id:'h1', name:'MALABAR TEA', ssid:'Big fat momo',        password:'bfm@3777',        lat:11.603119621566789, lng:75.59050468405299, desc:'BIG FAT MOMOS' },
+  { id:'h2', name:'MALABAR TEA', ssid:'GNXS-2.4G-7FFB52',   password:'1234567890',      lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
+  { id:'h3', name:'MALABAR TEA', ssid:'GNXS-e8cce0',        password:'viva7700',        lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
+  { id:'h4', name:'MALABAR TEA', ssid:'GNXS-2.4G-1852D0',   password:'arunp123',        lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
+
+  // Newly added hotspots
+  { id:'h5', name:'ARAKKILAD JUMA MASJID', ssid:'NRSS', password:'Paikkadi@66461',  lat:11.611685146823703, lng:75.59631598954608, desc:'not know correctly' },
+  { id:'h6', name:'AFSAL', ssid:'GNXS-2.4G-815F72',   password:'AFSAL@8044',      lat:11.613083971229628, lng:75.59550786229221, desc:'afsal house' },
+  { id:'h7', name:'MUSTAFA', ssid:'starnet',            password:'star12345',       lat:11.613870353313482, lng:75.59562303816998, desc:'not know correctly' },
+  { id:'h8', name:'SHAHIN', ssid:'GNXS-9ae468',        password:'shayanshayu',     lat:11.614954201731184, lng:75.59713787429996, desc:'shayan house' },
+  { id:'h9', name:'NEAR SHAHIN', ssid:'GNXS-2.4G-386730',   password:'17343718As*#',     lat:11.614494953088895, lng:75.59682147039027, desc:'HAJYAR STORE' },
+
+  // Added new hotspot
+  { id:'h10', name:'DARUL SHEZA', ssid:'Darul sheza', password:'8111947271', lat:11.612847052769842, lng:75.59566845618322, desc:'Darul sheza house' }
 ];
 
 // Helper: get page type
@@ -20,12 +31,13 @@ if (path === '' || path === 'index.html') {
 function renderList(){
   const grid = document.getElementById('grid');
   demoHotspots.forEach(h=>{
-    const card = document.createElement('div'); card.className='card';
+    const card = document.createElement('div'); 
+    card.className = 'card';
     card.innerHTML = `
       <h4>${h.name}</h4>
       <p>${h.desc}</p>
       <p><strong>SSID:</strong> ${h.ssid}</p>
-      <p><strong>Pass:</strong> <span>••••••</span></p>
+      <p><strong>Pass:</strong> <span>••••••••••••</span></p>
       <div style="display:flex;gap:8px;margin-top:8px">
         <a class="cta" href="detail.html?id=${h.id}">Open</a>
         <a class="ghost" href="#">Map</a>
@@ -34,9 +46,9 @@ function renderList(){
     grid.appendChild(card);
   });
 
-  // mini map
-  const map = L.map('map-mini').setView([9.5078, 76.3374], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
+  // mini map (centered near the MALABAR TEA area)
+  const map = L.map('map-mini').setView([11.609, 75.594], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19}).addTo(map);
   demoHotspots.forEach(h=>{
     const m = L.marker([h.lat, h.lng]).addTo(map);
     m.bindPopup(`<strong>${h.name}</strong><br>${h.ssid}`);
@@ -53,11 +65,12 @@ function renderDetail(){
   document.getElementById('desc').innerText = h.desc;
   document.getElementById('ssid').innerText = h.ssid;
   const passSpan = document.getElementById('password');
+  passSpan.innerText = '••••••••••••';
   document.getElementById('reveal').addEventListener('click', ()=> {
     passSpan.innerText = h.password;
   });
 
   const map = L.map('map-detail').setView([h.lat, h.lng], 16);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19}).addTo(map);
   L.marker([h.lat, h.lng]).addTo(map).bindPopup(h.name).openPopup();
 }
