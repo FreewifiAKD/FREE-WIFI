@@ -9,9 +9,12 @@ const demoHotspots = [
   { id:'h5', name:'ARAKKILAD JUMA MASJID', ssid:'NRSS', password:'Paikkadi@66461',  lat:11.611685146823703, lng:75.59631598954608, desc:'not know correctly' },
   { id:'h6', name:'AFSAL', ssid:'GNXS-2.4G-815F72',   password:'AFSAL@8044',      lat:11.613083971229628, lng:75.59550786229221, desc:'afsal house' },
   { id:'h7', name:'MUSTAFA', ssid:'starnet',            password:'star12345',       lat:11.613870353313482, lng:75.59562303816998, desc:'not know correctly' },
-  { id:'h8', name:'SHAHIN', ssid:'GNXS-9ae468',        password:'shayanshayu',     lat:11.614954201731184, lng:75.59713787429996, desc:'shayan house' },
+  { id:'h8', name:'SHAHIN', ssid:'GNXS-9ae468',        password:'shayanshayu',     lat:11.614954201731184, lng:75.59713787429996, desc:'shahin house' },
   { id:'h9', name:'NEAR SHAHIN', ssid:'GNXS-2.4G-386730',   password:'17343718As*#',     lat:11.614494953088895, lng:75.59682147039027, desc:'HAJYAR STORE' },
-
+  { id:'h11', name:'ARAKKILAD JUMA MASJID', ssid:'PAIKKADI 2.4', password:'HIZ@2014',  lat:11.611685146823703, lng:75.59631598954608, desc:'not know correctly' },
+  { id:'h12', name:'ARAKKILAD JUMA MASJID', ssid:'ഗജനാവ്💥', password:'Chooduve11@m',  lat:11.611685146823703, lng:75.59631598954608, desc:'jithu house' },
+  { id:'h13', name:'Vayal', ssid:'GNXS-344e00',   password:'8637522961',      lat:11.61087257455727, lng:75.59381566618084, desc:'bengaali house' },
+  { id:'h13', name:'Vayal', ssid:'GNXS-2.4G-1A9850',   password:'onetwo345',      lat:11.61087257455727, lng:75.59381566618084, desc:'not know corrrectly' },
   // Added new hotspot
   { id:'h10', name:'DARUL SHEZA', ssid:'Darul sheza', password:'8111947271', lat:11.612847052769842, lng:75.59566845618322, desc:'Darul sheza house' }
 ];
@@ -19,7 +22,7 @@ const demoHotspots = [
 // Helper: get page type
 const path = location.pathname.split('/').pop();
 
-if (path === '' || path === 'index.html') {
+if (path === '' || path === 'home.html') {
   // nothing to do (just static hero)
 } else if (path === 'list.html') {
   renderList();
