@@ -216,3 +216,69 @@ footer {
     font-size: 2.2rem;
   }
 }
+/* === Lock Screen === */
+#lock-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #011c2f, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 1s ease-out;
+}
+
+.lock-box {
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+.lock-box h2 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.lock-box input {
+  width: 120px;
+  text-align: center;
+  font-size: 24px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  margin: 10px 0;
+  letter-spacing: 5px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.lock-box button {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lock-box button:hover {
+  background: #00b7cc;
+  transform: scale(1.05);
+}
+
+#message {
+  margin-top: 10px;
+  color: #ff5555;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
