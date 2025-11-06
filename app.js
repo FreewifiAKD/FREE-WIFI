@@ -11,12 +11,19 @@ const demoHotspots = [
   { id:'h7', name:'MUSTAFA', ssid:'starnet',            password:'star12345',       lat:11.613870353313482, lng:75.59562303816998, desc:'not know correctly' },
   { id:'h8', name:'SHAHIN', ssid:'GNXS-9ae468',        password:'shayanshayu',     lat:11.614954201731184, lng:75.59713787429996, desc:'shahin house' },
   { id:'h9', name:'NEAR SHAHIN', ssid:'GNXS-2.4G-386730',   password:'17343718As*#',     lat:11.614494953088895, lng:75.59682147039027, desc:'HAJYAR STORE' },
+  { id:'h10', name:'DARUL SHEZA', ssid:'Darul sheza', password:'8111947271', lat:11.612847052769842, lng:75.59566845618322, desc:'Darul sheza house' },
   { id:'h11', name:'ARAKKILAD JUMA MASJID', ssid:'PAIKKADI 2.4', password:'HIZ@2014',  lat:11.611685146823703, lng:75.59631598954608, desc:'not know correctly' },
   { id:'h12', name:'ARAKKILAD JUMA MASJID', ssid:'ഗജനാവ്💥', password:'Chooduve11@m',  lat:11.611685146823703, lng:75.59631598954608, desc:'jithu house' },
   { id:'h13', name:'Vayal', ssid:'GNXS-344e00',   password:'8637522961',      lat:11.61087257455727, lng:75.59381566618084, desc:'bengaali house' },
-  { id:'h13', name:'Vayal', ssid:'GNXS-2.4G-1A9850',   password:'onetwo345',      lat:11.61087257455727, lng:75.59381566618084, desc:'not know corrrectly' },
-  // Added new hotspot
-  { id:'h10', name:'DARUL SHEZA', ssid:'Darul sheza', password:'8111947271', lat:11.612847052769842, lng:75.59566845618322, desc:'Darul sheza house' }
+  { id:'h14', name:'Vayal', ssid:'GNXS-2.4G-1A9850',   password:'onetwo345',      lat:11.61087257455727, lng:75.59381566618084, desc:'not know corrrectly' },
+  { id:'h15', name:'WAITING SHED', ssid:'GNXS-2.4G-C5A911', password:'BC62D2C5A911', lat:11.61011853034047, lng:75.59648688657059, desc:'not know correctly' },
+  { id:'h16', name:'KALADATH ROAD', ssid:'GNXS-2.4G-1D1700', password:'200C861D1700', lat:11.611038094414255, lng:75.59505458698146, desc:'not know correctly' },
+  { id:'h17', name:'ADAKKATHERUVU', ssid:'GNXS-9a6cb8', password:'sajeer1234', lat:11.60207615641583, lng:75.59480245930713, desc:'Darul sheza house' },
+  { id:'h18', name:'AYADATHIL TEMPLE', ssid:'GNXS-2.4G-D3FB40', password:'jack4321', lat:11.610481101686759, lng:75.59493925199564, desc:'AYADATHIL TEMPLE' },
+  { id:'h19', name:'AYADATHIL TEMPLE', ssid:'GNXS-2.4G-C5A831', password:'BC62D2C5A831', lat:11.610481101686759, lng:75.59493925199564, desc:'AYADATHIL TEMPLE' },
+
+  // New hotspot added
+  { id:'h20', name:'Nikshan Electronics Vadakara', ssid:'Nikshan 1', password:'Nik@1234', lat:11.591962518831686, lng:75.59159388127166, desc:'Electronics Shop - Vadakara' }
 ];
 
 // Helper: get page type
@@ -51,7 +58,7 @@ function renderList(){
 
   // mini map (centered near the MALABAR TEA area)
   const map = L.map('map-mini').setView([11.609, 75.594], 14);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19}).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
   demoHotspots.forEach(h=>{
     const m = L.marker([h.lat, h.lng]).addTo(map);
     m.bindPopup(`<strong>${h.name}</strong><br>${h.ssid}`);
@@ -74,6 +81,6 @@ function renderDetail(){
   });
 
   const map = L.map('map-detail').setView([h.lat, h.lng], 16);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19}).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(map);
   L.marker([h.lat, h.lng]).addTo(map).bindPopup(h.name).openPopup();
 }
