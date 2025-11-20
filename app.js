@@ -34,14 +34,18 @@ const demoHotspots = [
 
   { id:'h22', name:'Opposite road of Malabar tea', ssid:'GNXS-2.4G-1DE490', password:'200C861DE490', lat:11.603277180052242, lng:75.59104022410354, desc:'Opposite road Malabar Tea' },
 
-  { id:'h23', name:'ALFA ALUMINIUM', ssid:'GNXS-319470', password:'93886793', lat:11.604028308883516, lng:75.59416429570653, desc:'Alfa Aluminium Shop' }
+  { id:'h23', name:'ALFA ALUMINIUM', ssid:'GNXS-319470', password:'93886793', lat:11.604028308883516, lng:75.59416429570653, desc:'Alfa Aluminium Shop' },
+
+  { id:'h24', name:'KUNJIKANDI', ssid:'GNXS-572030', password:'1234567890', lat:11.61177434959242, lng:75.5952101970242, desc:'Kunjikandi House' },
+
+  { id:'h25', name:'JTS SCHOOL', ssid:'KFON@Wi-Fi', password:'KFON@123', lat:11.601820088480574, lng:75.59637671967695, desc:'JTS School Wifi' }
 ];
 
 // Helper: get page type
 const path = location.pathname.split('/').pop();
 
 if (path === '' || path === 'home.html') {
-  // nothing to do
+  // nothing to do (just static hero)
 } else if (path === 'list.html') {
   renderList();
 } else if (path === 'detail.html') {
@@ -51,6 +55,7 @@ if (path === '' || path === 'home.html') {
 /* LIST PAGE */
 function renderList(){
   const grid = document.getElementById('grid');
+
   demoHotspots.forEach(h=>{
     const card = document.createElement('div'); 
     card.className = 'card';
