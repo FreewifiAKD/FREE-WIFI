@@ -5,7 +5,7 @@ const demoHotspots = [
   { id:'h3', name:'MALABAR TEA', ssid:'GNXS-e8cce0', password:'viva7700', lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
   { id:'h4', name:'MALABAR TEA', ssid:'GNXS-2.4G-1852D0', password:'arunp123', lat:11.603119621566789, lng:75.59050468405299, desc:'opposite house' },
 
-  // Newly added hotspots
+  // Added hotspots
   { id:'h5', name:'ARAKKILAD JUMA MASJID', ssid:'NRSS', password:'Paikkadi@66461', lat:11.611685146823703, lng:75.59631598954608, desc:'not know correctly' },
   { id:'h6', name:'AFSAL', ssid:'GNXS-2.4G-815F72', password:'AFSAL@8044', lat:11.613083971229628, lng:75.59550786229221, desc:'afsal house' },
   { id:'h7', name:'MUSTAFA', ssid:'starnet', password:'star12345', lat:11.613870353313482, lng:75.59562303816998, desc:'not know correctly' },
@@ -29,16 +29,32 @@ const demoHotspots = [
 
   { id:'h20', name:'Nikshan Electronics Vadakara', ssid:'Nikshan 1', password:'Nik@1234', lat:11.591962518831686, lng:75.59159388127166, desc:'Electronics Shop - Vadakara' },
 
-  // ⭐ NEW HOTSPOTS YOU REQUESTED ⭐
   { id:'h21', name:'Opposite of Malabar tea', ssid:'GNXS-2.4G-E79030', password:'C@farde001', lat:11.603304012598155, lng:75.59052488112283, desc:'Opposite Malabar Tea shop' },
-
   { id:'h22', name:'Opposite road of Malabar tea', ssid:'GNXS-2.4G-1DE490', password:'200C861DE490', lat:11.603277180052242, lng:75.59104022410354, desc:'Opposite road Malabar Tea' },
-
   { id:'h23', name:'ALFA ALUMINIUM', ssid:'GNXS-319470', password:'93886793', lat:11.604028308883516, lng:75.59416429570653, desc:'Alfa Aluminium Shop' },
 
   { id:'h24', name:'KUNJIKANDI', ssid:'GNXS-572030', password:'1234567890', lat:11.61177434959242, lng:75.5952101970242, desc:'Kunjikandi House' },
+  { id:'h25', name:'JTS SCHOOL', ssid:'KFON@Wi-Fi', password:'KFON@123', lat:11.601820088480574, lng:75.59637671967695, desc:'JTS School Wifi' },
 
-  { id:'h25', name:'JTS SCHOOL', ssid:'KFON@Wi-Fi', password:'KFON@123', lat:11.601820088480574, lng:75.59637671967695, desc:'JTS School Wifi' }
+  // ⭐ NEW 6 HOTSPOTS YOU JUST SENT ⭐
+
+  { id:'h26', name:'ADAKKATHERU', ssid:'Airtel_Afsal', password:'PKCAFSAL',
+    lat:11.601766361969185, lng:75.59273908826529, desc:'Adakkatheru Area' },
+
+  { id:'h27', name:'ARAKKILAD SVLP SCHOOL', ssid:'VP', password:'9ZXCVBNMASDFGHJKL0',
+    lat:11.611746687480785, lng:75.60044161665814, desc:'School WiFi' },
+
+  { id:'h28', name:'PAZHANKAV FIRE STATION', ssid:'VIVEKMS4', password:'MS42493VIVOT3PRO',
+    lat:11.609855260438971, lng:75.58973677163533, desc:'Fire Station Area' },
+
+  { id:'h29', name:'110', ssid:'ZOHAS-2.4G', password:'19801985',
+    lat:11.603119621566789, lng:75.59050468405299, desc:'Nearby Location' },
+
+  { id:'h30', name:'MAHARAJAS', ssid:'MALABAR', password:'12345679',
+    lat:11.59215770830301, lng:75.60530884713862, desc:'Maharajas House' },
+
+  { id:'h31', name:'MAHARAJAS', ssid:'GNXS-2.4G-C76721', password:'BC62D2C76721',
+    lat:11.592133367880846, lng:75.60534197678683, desc:'Maharajas 2nd router' }
 ];
 
 // Helper: get page type
